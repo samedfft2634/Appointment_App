@@ -3,11 +3,17 @@ import AddModal from './AddModal';
 import AppointmentList from './AppointmentList';
 import { doctorData,appointmentData } from '../helpers/data';
 
+
+
 const Doctors = () => {
   const [appointments, setAppointments] = useState(appointmentData);
   useEffect(() => {
   }, [appointments]);
-
+  const handleclick = (e) => {
+    const id = e.currentTarget.id ? parseInt(e.currentTarget.id) : parseInt(e.currentTarget.parentNode.id);
+    const updatedList = appointments.filter(appointment => appointment.id !== id)
+    setAppointments(updatedList)
+  }
   return (
     <div className="Doctors">
       <div className="modalContainer">
@@ -15,11 +21,23 @@ const Doctors = () => {
           <AddModal {...doctor} appointments={appointments} setAppointments={setAppointments} key={index} />
         ))}
       </div>
-      <div className="appointmentList">
+      <h3 style={{color:"blueviolet",margin:"1rem 0"}}>Appointment List</h3>
+      {appointments.length > 0 ? (
+        <div className="appointmentList">
+          {appointments.map((item, index) => (
+            <AppointmentList {...item} handleclick={handleclick} key={index}/>
+          ))}
+        </div>
+      ) : (
+        <div className="no-appointments">
+          <img src="./img/appointment.jpg" alt="No Appointments" />
+        </div>
+      )}
+      {/* <div className="appointmentList">
         {appointments.map((item,index)=>(
-          <AppointmentList {...item} key={index}/>
+          <AppointmentList {...item} handleclick={handleclick} key={index}/>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
