@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import Swal from 'sweetalert2'
 
 function AddModal({ name, dep, img, setAppointments, appointments }) {
 	const [show, setShow] = useState(false);
@@ -22,6 +23,14 @@ function AddModal({ name, dep, img, setAppointments, appointments }) {
 				doctor: title,
 			};
 			setAppointments([...appointments, newAppointment]);
+		} else {
+			Swal.fire({
+				position: "center",
+				icon: "warning",
+				title: "Please enter a name and date informations for appointment!",
+				showConfirmButton: false,
+				timer: 1500
+			  });
 		}
 	};
 	const handleShow = (name) => {

@@ -1,11 +1,18 @@
 import { FaTimesCircle } from "react-icons/fa";
 
-const AppointmentList = ({ id, patient, day, consulted, doctor, handleclick }) => {
+const AppointmentList = ({
+	id,
+	patient,
+	day,
+	consulted,
+	doctor,
+	handleclick,
+}) => {
 	const formattedDay = day.toLocaleDateString();
 	const formattedTime = day.toLocaleTimeString();
 
 	return (
-		<div  className="appointments">
+		<div className="appointments">
 			<div className="titles">
 				<h4> {patient}</h4>
 				<h5> {doctor}</h5>
