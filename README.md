@@ -26,9 +26,9 @@ This project is a web-based appointment system for Anatolian Hospital. It allows
 -   **Appointment Management:** Users can view, add, and delete appointments.
 
 ## Screenshots
-<img src="https://github.com/samedfft2634/Appointment_App/assets/100915606/292e368e-4808-4155-9f8a-914525b1c6aa" alt="modalImg" width="45%" height="250px">
-<img src="https://github.com/samedfft2634/Appointment_App/assets/100915606/0308d6e5-5f35-4777-b9a7-06bdfecc45b2" alt="modalImg" width="45%" height="250px">
-<img src="https://github.com/samedfft2634/Appointment_App/assets/100915606/7e70411d-8db2-4de4-8cd4-ee8860a60cda" alt="modalImg" width="90%" height="350px">
+<img src="https://github.com/samedfft2634/Appointment_App/assets/100915606/292e368e-4808-4155-9f8a-914525b1c6aa" alt="modalImg" width="45%" height="300px">
+<img src="https://github.com/samedfft2634/Appointment_App/assets/100915606/0308d6e5-5f35-4777-b9a7-06bdfecc45b2" alt="modalImg" width="45%" height="300px">
+<img src="https://github.com/samedfft2634/Appointment_App/assets/100915606/7e70411d-8db2-4de4-8cd4-ee8860a60cda" alt="modalImg" width="90%" height="500px">
 
 
 ## Getting Started
